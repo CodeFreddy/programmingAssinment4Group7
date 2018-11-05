@@ -1,4 +1,4 @@
-# programmingAssignment2Group7
+# programmingAssignment4roup7
 
 Team members: Kunpeng Xie, Xin Liu
 
@@ -32,7 +32,7 @@ pdf verison on git:https://github.com/XinLiu92/programmingAssignment2Group7/blob
 
    save and exit the file and run the following command: source ~/.bash_profile Now you can go the ~/trec-car-tools-java-master to run the command.
 
-3. Clone the programming assignment by <https://github.com/XinLiu92/cs853programmingAssignment1Group7.git> to your local.
+3. Clone the programming assignment by <https://github.com/CodeFreddy/programmingAssinment4Group7.git> to your local.
 
 4. Open the cloned repository in Intellij, and reimport maven dependencies. Windows type in ctrl+shift+a to find action, type in "reimport", you will find "reimport all maven projects", then select it and press enter. Mac will type in cmd+shift +a instead. All of the necessary dependencies are included in pom.xml
 
@@ -63,16 +63,8 @@ pdf verison on git:https://github.com/XinLiu92/programmingAssignment2Group7/blob
    ```
 
    The output files will be created under the repository folder.
-
-
    
-
-   The output files will be created under the repository folder.
-
-   nDCG-defaultScoreFunc.txt/nDCG-customScoreFunc.txt
-
-
    Result:
 
-   https://github.com/XinLiu92/programmingAssignment2Group7/blob/master/result.pdf
+https://github.com/CodeFreddy/programmingAssinment4Group7.git
 
