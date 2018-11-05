@@ -21,8 +21,8 @@ import java.io.*;
 import java.util.*;
 
 public class BL {
-    private static String INDEX_DIR = "C:\\CS853\\index";
-    private static String OUTLINE = "C:\\CS853\\programmingAssignment4Group7\\output";
+    private static String INDEX_DIR = "";
+    private static String OUTLINE = "";
     private  static String output = "results_bl.run";
     private static Integer numDocs = 100;
     private static QueryParser parser = null;
@@ -48,7 +48,9 @@ public class BL {
         return freqSim;
     }
 
-    public static void RankDocWithBigram(ArrayList<Data.Page> queryList) {
+    public static void RankDocWithBigram(ArrayList<Data.Page> queryList, String indexDir, String outputPath) {
+        INDEX_DIR = indexDir;
+        OUTLINE = outputPath;
         ArrayList<String> runFileStrList = new ArrayList<String>();
         if (queryList != null) {
             for (Data.Page p : queryList) {

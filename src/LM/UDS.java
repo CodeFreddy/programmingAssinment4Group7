@@ -59,9 +59,8 @@ class RunFileString{
 
 
 public class UDS {
-    private static String INDEX_DIR = "C:\\CS853\\index";
-    private static String OUTLINE = "C:\\CS853\\programmingAssignment4Group7\\output";
-    //public static String PARAGRAPH = "C:\\CS853\\programAssignment3\\test200-train\\train.pages.cbor-paragraphs.cbor";
+    private static String INDEX_DIR = "";
+    private static String OUTLINE = "";
     private  static String output = "results_uds.run";
     private final int numDocs = 100;
 
@@ -87,8 +86,10 @@ public class UDS {
         return similarity;
     }
 
-   public UDS(ArrayList<Data.Page> pageList)
+    public UDS(ArrayList<Data.Page> pageList, String indexDir, String outPath)
     {
+        INDEX_DIR = indexDir;
+        OUTLINE = outPath;
         try{
             ArrayList<RunFileString> results = new ArrayList<>();
             for(Data.Page page: pageList)

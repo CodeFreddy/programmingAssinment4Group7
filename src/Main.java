@@ -1,3 +1,5 @@
+//import LM.BL;
+
 import LM.BL;
 import LM.UDS;
 import LM.UJM;
@@ -13,12 +15,10 @@ import java.util.List;
 //class to initial lucence index and search
 public class Main {
     public static final int topSearch = 100;
-
-    public static String INDEX_DIR = "C:\\CS853\\index";
-    public static String OUTLINE = "C:\\CS853\\programAssignment3\\test200-train\\train.pages.cbor-outlines.cbor";
-    public static String PARAGRAPH = "C:\\CS853\\programAssignment3\\test200-train\\train.pages.cbor-paragraphs.cbor";
-
-    public static String OUTPUT_DIR = "output";
+    public static String INDEX_DIR = "";
+    public static String OUTLINE = "";
+    public static String PARAGRAPH = "";
+    public static  String OUTPUTPATH = "";
 
     private static List<Data.Page> getPageList(String path){
         List<Data.Page> pageList = new ArrayList<>();
@@ -57,6 +57,11 @@ public class Main {
 
         //get page list
 
+        INDEX_DIR = args[0];
+        OUTLINE = args[1];
+        PARAGRAPH = args[2];
+        OUTPUTPATH = args[3];
+
         List<Data.Page> pageList = getPageList(OUTLINE);
         List<Data.Paragraph> paragraphList = getParagraphList(PARAGRAPH);
 
@@ -78,14 +83,15 @@ public class Main {
 
 
         ArrayList<Data.Page> pgList = new ArrayList<>(pageList);
-        UDS uds = new UDS(pgList);
+        //UDS_Test uds = new UDS_Test(pgList);
+        UDS uds = new UDS(pgList, INDEX_DIR, OUTPUTPATH);
+        BL.RankDocWithBigram(pgList, INDEX_DIR, OUTPUTPATH);
 
-        BL.RankDocWithBigram(pgList);
 
     }
 
     public static void writeFile(String name, List<String> content){
-        String fullpath = "/C:\\CS853\\programmingAssignment4Group7\\output" + "\\" + name;
+        String fullpath = "C:\\CS853\\programmingAssignment4Group7\\output" + "\\" + name;
         System.out.println(fullpath);
         try (FileWriter runfile = new FileWriter(new File(fullpath))) {
             for (String line : content) {
