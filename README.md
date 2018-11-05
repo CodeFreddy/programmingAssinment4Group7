@@ -66,5 +66,5 @@ pdf verison on git:https://github.com/XinLiu92/programmingAssignment2Group7/blob
    
    Result:
 
-https://github.com/CodeFreddy/programmingAssinment4Group7.git
+https://github.com/CodeFreddy/programmingAssinment4Group7/result.pdf
 
